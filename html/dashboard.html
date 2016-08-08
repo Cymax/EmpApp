@@ -1,0 +1,408 @@
+
+<div class="panel panel-default">
+   <div class="panel-heading">     
+       <h3 class="panel-title translatable">heder_dashboard</h3>
+      <!-- <span style="float:right!important;  margin: -21px -9px 0px 0px;">  <span id="filter_chart" class="btn btn-xs btn-primary"> <i class="fa fa-bar-chart" aria-hidden="true"></i> <span class="translatable">menu_report</span></span></span> -->   
+    </div>
+    <div class="panel-body" style="text-align: justify;">               
+        <div id="loading_response"></div>  
+
+            <div style="margin-top:2px;text-align: justify;" class="row-fluid">
+            
+              <div id="details" class="span7">
+               <div class="well">
+                    <div style="width:60%">
+                        <span style="float:left"><img id="img-thumbnail" src="" width="100" height="100" class="img-responsive img-thumbnail"></span>                        
+                        <span style="float:right">
+                            <h3 id="displayName"></h3>
+                            <h4 id="functionName"></h4>
+                        </span>
+                    </div>
+                <br>
+                <table class="table table-striped">        
+                    <tbody>
+                 
+                    <tr id="EersteziektedagTR">
+                        <td>Eerste verzuimdag:</td>
+                        <td id="Eersteziektedag"></td>
+                    </tr>
+                    <tr id="EersteverzuimdagTR">
+                        <td>Eerste ziektedag:</td>
+                        <td id="Eersteverzuimdag"></td>
+                    </tr>
+                    <tr id="VerzuimfrequentieTR">
+                        <td>Vangnetstatus:</td>
+                        <td id="Vangnetstatus"></td>
+                    </tr>
+                    <tr id="EersteziektedagTR">
+                        <td>Verzuimfrequentie (12 mnd):</td>
+                        <td id="Verzuimfrequentie"></td>
+                    </tr>
+                   <tr id="aanvangsdatumWIATR">
+                        <td>Evt. aanvangsdatum WIA:</td>
+                        <td id="aanvangsdatumWIA"></td>
+                    </tr>
+                    <tr id="BirthdateTR">
+                        <td>Geb. datum:</td>
+                        <td id="Birthdate"></td>
+                    </tr>
+                    
+                    <tr id="GeslachtTR">
+                        <td>Geslacht:</td>
+                        <td id="Geslacht"></td>
+                    </tr>
+                    
+                    
+                    <tr id="ManagerTR">
+                        <td>Manager:</td>
+                        <td id="Manager"></td>
+                    </tr>
+                    <tr id="DepartmentTR">
+                        <td>Afd.:</td>
+                        <td id="Department"></td>
+                    </tr>
+                    
+                    <tr id="IsManagerTR">
+                        <td>IsManager?:</td>
+                        <td id="IsManager"></td>
+                    </tr>
+                    
+                    <tr id="NumberOfSickdaysTR">
+                        <td>Ziekdagen:</td>
+                        <td id="NumberOfSickdays"></td>
+                    </tr>
+                    
+                     <tr id="SickStatusTR">
+                        <td>Vezuimstatus:</td>
+                        <td id="SickStatus"></td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td></td>
+                        <td> <button id="getDetails" data-id="" class="btn" style="width: 48%;">Detail</button></td>
+                    </tr>
+                   
+                
+                </tbody>
+                </table>
+                 
+                </div>
+            
+                <div id="detailsPanel">
+                    <h4 class="alert-heading">Details</h4> <span class="details-control all"></span>
+                    
+                    
+                        <table  class="table table-striped" style="width:48%;float:left">
+                          <tbody>
+                             <tr>
+                                <td colspan="2" style="border-bottom:1pt solid black;">Naam</td>
+                             </tr>                          
+                             <tr id="InitialsTR">
+                                <td>Initialen</td>
+                                <td id="Initials"></td>
+                             </tr>
+                             <tr id="FirstnameTR">
+                                <td>Voornaam</td>
+                                <td id="Firstname"></td>
+                             </tr>
+                             <tr id="ClamournameTR">
+                                <td>Voorvoegsel</td>
+                                <td id="Clamourname"></td>
+                             </tr>
+                             <tr id="LastnameTR">
+                                <td>Achternaam</td>
+                                 <td id="Lastname"></td>
+                             </tr>
+                             <tr id="DisplayNameTR">
+                                <td>Roepnaam</td>
+                                 <td id="DisplayName"></td>
+                             </tr>
+                              <tr id="NickNameTR">
+                                <td>Bijnaam</td>
+                                 <td id="NickName"></td>
+                             </tr>
+                             
+                             <tr>
+                                <td colspan="2" style="border-bottom:1pt solid black;">Partner/Familie</td>
+                             </tr>
+                              <tr id="Partner_prefixTR">
+                                <td>Partner Initialen</td>
+                                <td id="Partner_prefix"></td>
+                             </tr>
+                             <tr id="Partner_firstnameTR">
+                                <td>Partner Voornaam</td>
+                               <td id="Partner_firstname"></td>
+                             </tr>
+                             
+                             <tr id="Partner_lastnameTR">
+                                <td>Partner Achternaam</td>
+                                 <td id="Partner_lastname"></td>
+                             </tr>
+                             
+                             <tr id="SpouseTR">
+                                <td>Spouse</td>
+                                 <td id="Spouse"></td>
+                             </tr>
+                             
+                             
+                             <tr style="border-bottom:1pt solid black;">
+                                <td colspan="2" style="border-bottom:1pt solid black;">Medewerker ID</td>
+                             </tr>
+                             <tr id="CodeTR">
+                                <td>Medewerker code</td>
+                                <td id="Code"></td>
+                             </tr>
+                             <tr id="IdTR">
+                                <td>Medewerker ID</td>
+                                <td id="Id"></td>
+                             </tr>
+                             <tr style="border-bottom:1pt solid black;">
+                                <td colspan="2" style="border-bottom:1pt solid black;">Verzuimhistorie</td>
+                             </tr>
+                             <tr>
+                                <td colspan="2" id="SickHistoryList"></td>                                
+                             </tr>
+                            
+                          </tbody>
+                       </table>
+                       <table  class="table table-striped" style="width:48%;float:right">
+                          <tbody>
+                             <tr>
+                                <td colspan="2" style="border-bottom:1pt solid black;">Contactinformatie</td>
+                             </tr>
+                             <tr id="StreetTR">
+                                <td>Straat</td>
+                                <td id="Street"></td>
+                             </tr>
+                             <tr id="HousenrTR">
+                                <td>Huisnummer</td>
+                                <td id="Housenr"></td>
+                             </tr>
+                             <tr id="HousenrsuffixTR">
+                                <td>Toevoeging</td>
+                                <td id="Housenrsuffix"></td>
+                             </tr>
+                             <tr id="PostalcodeTR">
+                                <td>Postcode</td>
+                                <td id="Postalcode"></td>
+                             </tr>
+                             <tr id="CityTR">
+                                <td>Plaats</td>
+                                <td id="City"></td>
+                             </tr>
+                             <tr id="CountryTR">
+                                <td>Land</td>
+                                <td id="Country"></td>
+                             </tr>
+                             <tr id="TelephonenrTR">
+                                <td>Telefoon (privé)</td>
+                                <td id="Telephonenr"></td>
+                             </tr>
+                             <tr id="WorkTelephonenrTR">
+                                <td>Telefoon (werk)</td>
+                                <td id="WorkTelephonenr"></td>
+                             </tr>
+                             <tr id="MobilenrTR">
+                                <td>Mobiel</td>
+                                <td id="Mobilenr"></td>
+                             </tr>
+                             <tr id="EmailTR">
+                                <td>Primair e-mailadres</td>
+                                <td id="Email"></td>
+                             </tr>
+                             <tr>
+                                <td colspan="2" style="border-bottom:1pt solid black;">Persoonlijke informatie</td>
+                             </tr>
+                             <tr id="GenderTR">
+                                <td>M/V</td>
+                                <td id="Gender"></td>
+                             </tr>                           
+                            <!-- <tr id="BirthdateTR">
+                                <td>Geboortedatum</td>
+                                <td id="Birthdate"></td>
+                             </tr>-->
+                             <tr id="SofinrTR">
+                                <td>BSN</td>
+                                <td id="Sofinr"></td>
+                             </tr>
+                             <tr id="NationalityTR">
+                                <td>Nationaliteit</td>
+                                <td id="Nationality"></td>
+                             </tr> 
+                             
+                             <tr>
+                                <td colspan="2" style="border-bottom:1pt solid black;">Werk</td>
+                             </tr>  
+                             
+                             <tr id="SalaryTR">
+                                <td>Salaris</td>
+                                <td id="Salary"></td>
+                             </tr>
+                             
+                             <tr id="CompanyNameTR">
+                                <td>Bedrijfsnaam</td>
+                                <td id="CompanyName"></td>
+                             </tr>
+                             
+                              <tr id="LocationNameTR">
+                                <td>Locatienaam</td>
+                                <td id="LocationName"></td>
+                             </tr>
+                             
+                             <tr id="Hours_mondayTR">
+                                <td>Uur ma</td>
+                                <td id="Hours_monday"></td>
+                             </tr>
+                             
+                             <tr id="Hours_tuesdayTR">
+                                <td>Uur di</td>
+                                <td id="Hours_tuesday"></td>
+                             </tr>
+                             
+                             <tr id="Hours_wednesdayTR">
+                                <td>Uur wo</td>
+                                <td id="Hours_wednesday"></td>
+                             </tr>
+                             
+                             <tr id="Hours_thursdayTR">
+                                <td>Uur do</td>
+                                <td id="Hours_thursday"></td>
+                             </tr>
+                             
+                             <tr id="Hours_fridayTR">
+                                <td>Uur vr</td>
+                                <td id="Hours_friday"></td>
+                             </tr>
+                             
+                             <tr id="Hours_saturdayTR">
+                                <td>Uur za</td>
+                                <td id="Hours_saturday"></td>
+                             </tr>
+                             
+                              <tr id="Hours_sundayTR">
+                                <td>Uur z0</td>
+                                <td id="Hours_sunday"></td>
+                             </tr>
+                             
+                             <tr id="ContractTypeTR">
+                                <td>ContractType</td>
+                                <td id="ContractType"></td>
+                             </tr>
+                             
+                             <tr id="EndTemporaryContractTR">
+                                <td>Eind tijdelijk contr.</td>
+                                <td id="EndTemporaryContract"></td>
+                             </tr>
+                             
+                             <tr id="Permanent_EmploymentTR">
+                                <td>Vaste contr.</td>
+                                <td id="Permanent_Employment"></td>
+                             </tr>                
+                             
+                             <tr id="Emergency_ContactTR">
+                                <td>Calamiteit contact</td>
+                                <td id="Emergency_Contact"></td>
+                             </tr>                             
+                             <tr id="Emergency_PhoneNrTR">
+                                <td>Contact nr.</td>
+                                <td id="Emergency_PhoneNr"></td>
+                             </tr>
+            
+                          </tbody>
+                       </table>      
+                  </div>   
+            </div>
+            
+            <div class="span5">
+                <div class="well">
+                     <span style="float:left"></span>   
+                     <span style="float:right">
+                            <button type="button" class="btn btn-default btn-sm" id="idChart">
+                                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                            </button>  
+                            <button type="button" class="btn btn-default btn-sm" id="idAction">
+                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                            </button>      
+                    </span>
+                    <h3 class="translatable"></h3> 
+                    <div id="actionID" class="alert no-reports" style="margin-top:40px">                            
+                            <a style="width: 48%; margin: 2px;text-align: justify;" href="html/popups/sickModal.html" class="insert_sick_button btn btn-xs btn-primary"><span class="glyphicon glyphicon-warning-sign"></span> Ziekmelden/Mutaties</a>
+                            <a style="width: 48%; margin: 2px;text-align: justify;"  href="html/popups/betterModal.html"  class="update_sick_button btn btn-xs btn-info"><span class="glyphicon glyphicon-plus-sign"></span> Hersteldmelden</a>
+                            <a style="width: 48%; margin: 2px;text-align: justify;" href="html/popups/pregnancyModal.html"  class="insert_preg_button btn btn-xs btn-default"><span class="glyphicon glyphicon-user"></span> Zwangerschapsmelden</a>                            
+                            <a href="#/notes" class="translatable btn btn-xs btn-danger" style="width: 48%; margin: 2px;    text-align: justify;"><span class="glyphicon glyphicon-book"></span> Notitie</a>
+                            <a href="#/reintegration" class="translatable btn btn-xs btn-primary" style="width: 48%; margin: 2px;    text-align: justify;"><span class="glyphicon glyphicon-resize-small"></span> Re-integratie</a>
+                            <a href="#/meetingRequest" class="translatable btn btn-xs btn-success" style="width: 48%; margin: 2px;    text-align: justify;"><span class="glyphicon glyphicon-calendar"></span> Afspraak maken</a> 
+                            <a href="#/wga" class="translatable btn btn-xs btn-success" style="width: 48%; margin: 2px;    text-align: justify;"><span class="glyphicon glyphicon-briefcase"></span> WGA</a> 
+                            <a href="#/work" class="translatable btn btn-xs btn-default" style="width: 48%; margin: 2px;    text-align: justify;"><span class="glyphicon glyphicon-folder-close"></span> Werk</a>
+                            <a href="#/prevention" class="translatable btn btn-xs btn-info" style="width: 48%; margin: 2px;    text-align: justify;"><span class="glyphicon glyphicon-export"></span> Preventie</a>                             
+                            <a href="#/actionMonitor" class="translatable btn btn-xs btn-primary" style="width: 48%; margin: 2px;    text-align: justify;"><span class="glyphicon glyphicon-briefcase"></span> Actionmonitor </a>        
+                            
+                    </div>   
+                     
+                    <h3 class="translatable"></h3>
+                    <div id="containerID" style="min-width: 410px; height: 200px; margin: 0 auto"></div> 
+                    
+                    <div class="alert alert-info" style="margin-top:40px">            
+                        bla bla bla bla.....
+                    </div>
+                    
+                </div>
+            </div>
+         </div>                
+       </div> 
+
+</div>    
+            				 
+<!-- sickModal -->
+<div id="sickModal" class="modal fade" 
+     tabindex="-1" role="dialog" aria-labelledby="plan-info" aria-hidden="true">
+    <div class="modal-dialog modal-full-screen">
+        <div class="modal-content">             
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> <span class="glyphicon glyphicon-remove-circle"></span></button> 
+                <h4 class="modal-title translatable">sick_info_report_sick</h4>
+            </div>          
+           
+            <div class="modal-body">
+                <!-- /# content goes here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="betterModal" class="modal fade" 
+     tabindex="-1" role="dialog" aria-labelledby="plan-info" aria-hidden="true">
+    <div class="modal-dialog modal-full-screen">
+        <div class="modal-content">             
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> <span class="glyphicon glyphicon-remove-circle"></span></button> 
+                <h4 class="modal-title translatable">sick_info_report_recovery</h4>
+            </div>          
+           
+            <div class="modal-body">
+                <!-- /# content goes here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pregModal" class="modal fade" 
+     tabindex="-1" role="dialog" aria-labelledby="plan-info" aria-hidden="true">
+    <div class="modal-dialog modal-full-screen">
+        <div class="modal-content">             
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> <span class="glyphicon glyphicon-remove-circle"></span></button> 
+                <h4 class="modal-title translatable">sick_info_report_sick</h4>
+            </div>          
+           
+            <div class="modal-body">
+                <!-- /# content goes here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
