@@ -8,11 +8,48 @@ define(function(require) {
   var notesPage = Backbone.View.extend({
     template: _.template(notesTemplate),
     render: function() {
-	  	  require(['jquery','jqueryui','bootstrap','jquery_validate','md5', 'store','wb_translate'], function($){ 		
+	  	  require(['jquery','jqueryui','bootstrap','jquery_validate','md5', 'store','wb_translate','summernote','summernote-nl'], function($){ 		
 		 
 		  $(function(){				 
-			 	renderTranslations();
+			 	renderTranslations();				
 	      });//ready
+		  
+		  $(function() {
+			$('.summernote').summernote({
+			  height: 100,
+			  codemirror: { // codemirror options
+				mode: 'text/html',
+				htmlMode: true,
+				lineNumbers: true,
+				theme: 'monokai'
+			  }
+			});
+			
+			
+			
+			 $('#showHideDate').hide();		
+			
+			 $(document).on("click", '#actie_maken', function (e) {							 
+				if ($('#actie_maken').prop('checked')===true) {											
+					 $('#showHideDate').show();
+				} else if ($('#actie_maken').prop('checked')===false) {
+					 $('#showHideDate').hide();					
+				}				
+			});					
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		  });
 		  
 	   });//require
       this.$el.html(this.template(this));    

@@ -7,7 +7,7 @@ var absService = new absServices();
 function absServices(){	
 	this.processSuccess = function(data, status, req) {
 		if (status == "success"){
-			$("#response").text($(req.responseXML).find("HelloResult").text());
+			$("#response").text($(req.responseXML).find("OK").text());
 		}l
 	};		
 	this.processError = function(data, status, req) {

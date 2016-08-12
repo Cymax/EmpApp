@@ -1,6 +1,7 @@
 //constants
 
-var baseURL,restURL, sUrl = window.location.pathname.split('/')[1],
+var baseURL,restURL, sUrl = location.hostname,
+	sUrl2 = window.location.pathname.split('/')[1],
 	bLanguage = (window.navigator.userLanguage || window.navigator.language).substring(0, 2).toLowerCase();
 	
 	
@@ -15,15 +16,17 @@ function switchAmsservicet(service){
 		default: return "https://login.absentiemanager.nl/abs/";     
 	}
 }	
-
-if (sUrl == "wb"){
-	baseURL = "http://localhost/wb/emp/";	
+if (sUrl == "localhost"){
+	baseURL =  window.location.protocol!='https:'? "http://localhost/apps/EmpApp/": "https://localhost/apps/EmpApp/";	
 	restURL = "https://demo.absentiemanager.nl/abs3demo/"; 	
-} else if (sUrl == "acc"){
-	baseURL = "https://login.workbee.eu/acc/emp/";
+} else if (sUrl == "amapptst.workbee.eu"){	
+	baseURL =  window.location.protocol!='https:'? "http://amapptst.workbee.eu": "https://amapptst.workbee.eu";	
+	restURL = "https://demo.absentiemanager.nl/abs3demo/";  
+} else if (sUrl == "amappacc.workbee.eu"){		
+	baseURL =  window.location.protocol!='https:'? "http://amappacc.workbee.eu": "https://amappacc.workbee.eu";	
 	restURL = "https://demo.absentiemanager.nl/abs3demo/";  
 } else {
-    baseURL = "https://login.workbee.eu/emp/";
+	baseURL =  window.location.protocol!='https:'? "http://login.workbee.eu": "https://login.workbee.eu";	  
 	restURL = "https://login.absentiemanager.nl/abs"; 	
 }
 //function to define and include required css files
@@ -43,6 +46,6 @@ fncRequireCssFile(baseURL+"css/font-awesome.min.css", false, _vers, "","styleshe
 fncRequireCssFile(baseURL+"js/libs/jqueryui/css/jquery-ui.css", false, _vers, "","stylesheet","");
 fncRequireCssFile(baseURL+"css/main.css", false, _vers, "","stylesheet","");	
 fncRequireCssFile(baseURL+"css/pace.css", false, _vers, "","stylesheet","");
-fncRequireCssFile(baseURL+"js/libs/bootstrap/css/bootstrap-responsive.css", false, _vers, "screen","stylesheet","");	
+//fncRequireCssFile(baseURL+"js/libs/bootstrap/css/bootstrap-responsive.css", false, _vers, "screen","stylesheet","");	
 
 

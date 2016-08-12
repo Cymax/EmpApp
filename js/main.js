@@ -39,7 +39,10 @@ define([], function() {
 		'am_service':'am_services',
 		
 		'datatablesYadcf':'libs/datatables/jquery.dataTables.yadcf',
+		'summernote':'libs/summernote/summernote',
+		'summernote-nl':'libs/summernote/summernote-nl',
     },
+	
 	shim: {
 		'jquery': {exports: '$'},
 		'underscore': {	exports: '_'},
@@ -70,6 +73,8 @@ define([], function() {
 		
 		'alasql': {deps: ['jquery']},	
 		'datatablesYadcf': {deps: ['jquery', 'datatables']},
+		'summernote': {deps: ['jquery', 'bootstrap']},
+		'summernote-nl': {deps: ['summernote']},
 		
     }
 	
